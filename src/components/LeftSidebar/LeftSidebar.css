@@ -1,0 +1,89 @@
+.ls{
+    display: flex;
+    flex-direction: column;
+    background: #001030;
+    color: white;
+    height: 75vh;
+    width: 100%;
+    border-radius: 10px;
+}
+.ls-top{
+    padding: 20px;
+    gap: 10px
+}
+
+.ls-nav{
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.ls-nav .logo{
+    max-width: 140px;    
+}
+
+.ls-nav .menu img{
+    max-width: 20px;
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.ls-search{
+    background-color: #002670;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    margin-top: 20px;
+    border-radius: 4px;
+}
+.ls-search img{
+   width: 16px;
+   opacity: 0.7;
+}
+.ls-search input{
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 11px;
+}
+.ls-search input::placeholder{
+    
+    color: #cccccc;
+    font-size: 14px;
+}
+
+.ls-list{
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    height: 70%;
+    overflow-y: scroll;
+    padding: 10px 0;
+}
+
+.friends img{
+    width: 35px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+}
+
+.friends{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.friends div{
+    display: flex;
+    flex-direction: column;
+}
+
+.friends span{
+    color: #9f9f9f;
+    font-size: 11px ;
+}
