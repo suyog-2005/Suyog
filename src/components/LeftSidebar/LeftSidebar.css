@@ -1,6 +1,4 @@
 .ls{
-    display: flex;
-    flex-direction: column;
     background: #001030;
     color: white;
     height: 75vh;
@@ -9,7 +7,7 @@
 }
 .ls-top{
     padding: 20px;
-    gap: 10px
+    gap: 10px;
 }
 
 .ls-nav{
