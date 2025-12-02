@@ -4,10 +4,10 @@
     height: 75vh;
     width: 100%;
     border-radius: 10px;
+    overflow: hidden;
 }
 .ls-top{
     padding: 20px;
-    gap: 10px;
 }
 
 .ls-nav{
@@ -47,8 +47,7 @@
     font-size: 11px;
 }
 .ls-search input::placeholder{
-    
-    color: #cccccc;
+    color: #c8c8c8;
     font-size: 14px;
 }
 
@@ -56,9 +55,9 @@
     display: flex;
     flex-grow: 1;
     flex-direction: column;
-    height: 70%;
+    height: 75%;
     overflow-y: scroll;
-    padding: 10px 0;
+    padding: 10px 0px;
 }
 
 .friends img{
@@ -84,4 +83,14 @@
 .friends span{
     color: #9f9f9f;
     font-size: 11px ;
+}
+
+.friends:hover{
+    background-color: #077eff;
+    transition: 0.3s;
+    opacity: 0.7;
+}
+
+.friends:hover span{
+    color: white;
 }

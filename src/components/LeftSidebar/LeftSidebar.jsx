@@ -15,15 +15,17 @@ const LeftSidebar = () => {
           <img src={assets.search_icon} alt="" />
           <input type="text" placeholder='search-here' />
         </div>
-        <div className="ls-list">
-          <div className="friends">
+      </div>
+      <div className="ls-list">
+        {Array(20).fill("").map((item,index)=>(
+          <div key = {index} className="friends">
             <img src={assets.profile_img} alt="" />
-            <div>
-              <p>Richard Sanford</p>
-              <span>Hello, How are You</span>
-            </div>
+          <div>
+            <p>Richard Sanford</p>
+            <span>Hello, How are You</span>
           </div>
         </div>
+        ))}
       </div>
     </div>
   )
