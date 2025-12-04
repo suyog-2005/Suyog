@@ -39,7 +39,9 @@
     border  : none;
     cursor: pointer;
     transition: 0.3sec;
-    
+}
+.login-form button:active{
+    transform: scale(0.98);
 }
 
 .login-form button:hover{

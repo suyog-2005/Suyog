@@ -1,31 +1,38 @@
 import React, { useState } from 'react'
 import './login.css'
 import assets from '../../assets/assets'
-import { signup } from '../../config/firebase.js'
+import { signup, login } from '../../config/firebase.js'
 const Login = () => {
 
+//state to toggle between login and signup
   const [currState, setCurrState] = useState("Login");
-
+//login/signup state variables
   const [userName, setUserName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+//form submit handler
   const onSubmitHandler = (e) =>{
     e.preventDefault();
     if(currState === "Sign Up"){
       signup(userName, email, password);
     }
+    else{
+      login(email, password);
+    }
     console.log("Form submitted");
   }
+
   return (
     <div className = 'login'>
       <img src={assets.logo_big} alt="" className="logo"/>
+
       <form onSubmit={onSubmitHandler} className = "login-form">
         <h2>{currState}</h2>
         {currState === "Sign Up"?<input onChange = {(e) =>setUserName(e.target.value)} value = {userName} type="text" placeholder='Username'className="form-input" required/> : null}
-        <input onChange = {(e)=>setEmail(e.target.value)} value = {email} type="email" placeholder='Email address' className="form-input" required/>
-        <input onChange = {(e)=>setPassword(e.target.value)} value = {password} type="password" placeholder= 'Password'className="form-input" required/>
-        <button type = 'submit' >{currState === "Sign Up"?"Create account" : "Sign In"}</button>
+        <input onChange = {(e) =>setEmail(e.target.value)} value = {email} type="email" placeholder='Email address' className="form-input" required/>
+        <input onChange = {(e) =>setPassword(e.target.value)} value = {password} type="password" placeholder= 'Password'className="form-input"  required/>
+        <button type = 'submit' > {currState === "Sign Up"?"Create account" : "Sign In"} </button>
         <div className="login-term">
           <input type="checkbox" />
           <p>Agree to terms of use & privacy policy.</p>
